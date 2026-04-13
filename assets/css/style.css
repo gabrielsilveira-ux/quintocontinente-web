@@ -157,7 +157,7 @@ nav.scrolled {
 /* ── HERO (com imagem de fundo) ───────────────────────────── */
 .hero {
   min-height: 100vh;
-  padding: 10rem 3rem 5rem;
+  padding: calc(var(--nav-h) + 4rem) 3rem 5rem;
   position: relative;
   overflow: hidden;
   display: flex;
