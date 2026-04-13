@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços – Quinto Continente</title>
+  <meta name="description" content="Catálogo completo dos serviços da Quinto Continente: intermediação de shows, produção, projetos especiais e leis de incentivo.">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .svc-block { display:grid; grid-template-columns:1fr 1.4fr; gap:6rem; align-items:start; padding:6rem 3rem; border-bottom:1px solid var(--line2); }
+    .svc-block:last-child { border-bottom:none; }
+    .svc-block:nth-child(even) { direction:rtl; }
+    .svc-block:nth-child(even) > * { direction:ltr; }
+    .svc-block-num { font-family:'Syne',sans-serif; font-size:4rem; font-weight:800; color:var(--line2); line-height:1; margin-bottom:1.5rem; }
+    .svc-block-title { font-family:'Syne',sans-serif; font-size:clamp(1.6rem,2.5vw,2.2rem); font-weight:800; letter-spacing:-0.03em; color:var(--text); margin-bottom:1.2rem; line-height:1.1; }
+    .svc-block-desc { font-size:.9rem; font-weight:300; line-height:1.85; color:var(--muted2); }
+    .svc-block-desc p+p { margin-top:1rem; }
+    .svc-block-desc strong { color:var(--text); font-weight:400; }
+    .feat-list { list-style:none; margin-top:2rem; display:flex; flex-direction:column; gap:.75rem; }
+    .feat-list li { display:flex; align-items:flex-start; gap:.75rem; font-size:.875rem; font-weight:300; line-height:1.65; color:var(--muted2); }
+    .feat-list li::before { content:''; flex-shrink:0; width:6px; height:6px; border-radius:50%; background:var(--accent); margin-top:.5rem; }
+    .svc-panel { background:var(--bg3); border:1px solid var(--line2); border-radius:var(--radius-xl); padding:2.5rem; position:sticky; top:calc(var(--nav-h) + 2rem); }
+    .svc-panel-title { font-family:'Syne',sans-serif; font-size:.62rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--muted2); margin-bottom:1.5rem; }
+    .svc-panel-item { padding:1.25rem 0; border-bottom:1px solid var(--line); }
+    .svc-panel-item:last-child { border-bottom:none; }
+    .svc-panel-label { font-family:'Syne',sans-serif; font-size:.75rem; font-weight:600; color:var(--text); margin-bottom:.3rem; }
+    .svc-panel-val { font-size:.82rem; font-weight:300; color:var(--muted2); }
+    .faq { max-width:760px; margin:4rem auto 0; }
+    .faq-item { border-bottom:1px solid var(--line2); }
+    .faq-q { display:flex; justify-content:space-between; align-items:center; padding:1.5rem 0; cursor:default; gap:1rem; font-family:'Syne',sans-serif; font-size:.95rem; font-weight:600; color:var(--text); }
+    .faq-icon { flex-shrink:0; width:20px; height:20px; position:relative; }
+    .faq-icon::before,.faq-icon::after { content:''; position:absolute; background:var(--muted2); top:50%; left:50%; transform:translate(-50%,-50%); transition:transform .3s,opacity .3s; }
+    .faq-icon::before { width:12px; height:1.5px; }
+    .faq-icon::after  { width:1.5px; height:12px; }
+    .faq-item.open .faq-icon::after { transform:translate(-50%,-50%) rotate(90deg); opacity:0; }
+    .faq-a { font-size:.875rem; font-weight:300; line-height:1.8; color:var(--muted2); max-height:0; overflow:hidden; transition:max-height .4s ease,padding .3s; }
+    .faq-item.open .faq-a { max-height:500px; padding-bottom:1.5rem; }
+    @media(max-width:900px){ .svc-block{grid-template-columns:1fr;gap:3rem;padding:4rem 1.5rem} .svc-block:nth-child(even){direction:ltr} .svc-panel{position:static} }
+  </style>
+</head>
+<body>
+
+  <div id="cur" class="cursor"></div>
+  <div id="curR" class="cursor-ring"></div>
+  <nav id="nav">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/images/logo.png" alt="Quinto Continente" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\'font-family:Syne,sans-serif;font-size:1.1rem;font-weight:800;color:var(--text)\'>Quinto Continente</span>')">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../sobre/index.html">Quem Somos</a></li>
+      <li><a href="index.html" class="active">Serviços</a></li>
+      <li><a href="../index.html#diferenciais">Diferenciais</a></li>
+      <li><a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+    <a href="../index.html#contato" class="nav-btn">Consultar Agenda</a>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav-mobile">
+    <a href="../index.html">Home</a>
+    <a href="../sobre/index.html">Quem Somos</a>
+    <a href="index.html">Serviços</a>
+    <a href="../index.html#diferenciais">Diferenciais</a>
+    <a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a>
+    <a href="../index.html#contato" style="color:var(--accent)">Consultar Agenda →</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="../index.html">Home</a><span>/</span><span>Serviços</span></div>
+    <div class="page-hero-label">O que fazemos</div>
+    <h1>Soluções 360° para o mercado de entretenimento.</h1>
+    <p class="page-hero-sub">Do contato inicial com o artista à execução do último detalhe técnico no dia do evento. Cada serviço foi desenhado para eliminar riscos e maximizar o retorno do seu investimento.</p>
+  </div>
+
+  <div style="background:var(--bg)">
+    <div class="svc-block" id="intermediacao">
+      <div>
+        <div class="svc-block-num">01</div>
+        <div class="dif-pill">Shows &amp; Booking</div>
+        <h2 class="svc-block-title">Intermediação de Shows</h2>
+        <div class="svc-block-desc">
+          <p>Atuamos como elo direto entre o seu evento e os maiores nomes do cenário nacional. Nossa rede de parceiros artísticos cobre todos os gêneros com acesso privilegiado a agendas e cachet diferenciado.</p>
+          <p>Toda negociação passa pelo nosso jurídico, garantindo <strong>contratos sólidos, cláusulas claras e segurança para ambas as partes</strong>.</p>
+        </div>
+        <ul class="feat-list">
+          <li>Acesso a artistas de nível nacional e regional</li>
+          <li>Negociação de cachet e condições de pagamento</li>
+          <li>Elaboração e revisão de contrato artístico</li>
+          <li>Gestão do rider técnico e hospitalidade</li>
+          <li>Acompanhamento até a confirmação final</li>
+        </ul>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem">
+          <a href="booking/index.html" class="btn-main">Solicitar booking <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="../index.html#contato" class="btn-outline">Falar com a equipe</a>
+        </div>
+      </div>
+      <div class="svc-panel">
+        <div class="svc-panel-title">Informações do serviço</div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Público-alvo</div><div class="svc-panel-val">Produtores, prefeituras, empresas e casas de show</div></div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Prazo mínimo</div><div class="svc-panel-val">60 dias de antecedência recomendados</div></div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Gêneros disponíveis</div><div class="svc-panel-val">Sertanejo, Forró, Pop, Funk, Pagode, Rock e mais</div></div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Cobertura</div><div class="svc-panel-val">Todo o território nacional</div></div>
+      </div>
+    </div>
+
+    <div class="svc-block" id="producao" style="background:var(--bg2)">
+      <div>
+        <div class="svc-block-num">02</div>
+        <div class="dif-pill">Produção</div>
+        <h2 class="svc-block-title">Produção e Assessoria Técnica</h2>
+        <div class="svc-block-desc">
+          <p>Além da intermediação, oferecemos a gestão operacional completa do evento. Nossa equipe técnica garante que cada elemento do rider seja executado com precisão, desde o sistema de som e iluminação até a logística de camarim.</p>
+          <p>Para eventos de grande porte, operamos em conjunto com os fornecedores do contratante ou indicamos parceiros homologados com <strong>histórico comprovado de entrega</strong>.</p>
+        </div>
+        <ul class="feat-list">
+          <li>Leitura e execução de rider técnico completo</li>
+          <li>Coordenação de som, luz e estrutura de palco</li>
+          <li>Logística de camarim e hospitalidade VIP</li>
+          <li>Gestão de transfers, hospedagem e backline</li>
+          <li>Supervisão técnica no dia do evento</li>
+        </ul>
+        <div style="margin-top:2rem">
+          <a href="../index.html#contato" class="btn-main">Solicitar orçamento <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="svc-panel">
+        <div class="svc-panel-title">Escopo do serviço</div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Modalidade</div><div class="svc-panel-val">Assessoria ou gestão completa (full service)</div></div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Porte ideal</div><div class="svc-panel-val">Eventos a partir de 500 pessoas</div></div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Entregáveis</div><div class="svc-panel-val">Cronograma, checklist técnico, relatório pós-evento</div></div>
+      </div>
+    </div>
+
+    <div class="svc-block" id="especiais">
+      <div>
+        <div class="svc-block-num">03</div>
+        <div class="dif-pill">Especial</div>
+        <h2 class="svc-block-title">Projetos Especiais</h2>
+        <div class="svc-block-desc">
+          <p>Quando o evento exige uma experiência única e sob medida, ativamos nosso núcleo criativo para conceber, planejar e executar projetos do zero. Festivais temáticos, ativações corporativas, lançamentos de produto com shows ao vivo.</p>
+          <p>Cada projeto especial é tratado como um <strong>produto de entretenimento completo</strong>, com identidade visual, curadoria artística e experiência do público integradas.</p>
+        </div>
+        <ul class="feat-list">
+          <li>Conceituação criativa e curadoria artística</li>
+          <li>Festivais, shows temáticos e experiências imersivas</li>
+          <li>Ativações corporativas com entretenimento ao vivo</li>
+          <li>Gerenciamento completo do projeto</li>
+          <li>Mensuração de resultados e relatório executivo</li>
+        </ul>
+        <div style="margin-top:2rem">
+          <a href="../index.html#contato" class="btn-main">Apresentar meu projeto <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="svc-panel">
+        <div class="svc-panel-title">Formato</div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Início do processo</div><div class="svc-panel-val">Briefing + reunião de alinhamento estratégico</div></div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Prazo de entrega</div><div class="svc-panel-val">Definido por projeto (mínimo 90 dias)</div></div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Contratação</div><div class="svc-panel-val">Proposta customizada com escopo detalhado</div></div>
+      </div>
+    </div>
+
+    <div class="svc-block" id="leis" style="background:var(--bg2)">
+      <div>
+        <div class="svc-block-num">04</div>
+        <div class="dif-pill">Incentivo Fiscal</div>
+        <h2 class="svc-block-title">Leis de Incentivo Cultural</h2>
+        <div class="svc-block-desc">
+          <p>Nossa consultoria especializada em Proac (SP) e Lei Rouanet (Federal) permite que eventos culturais acessem recursos públicos. Cuidamos de todo o processo de inscrição, habilitação e prestação de contas.</p>
+          <p>Com experiência em projetos aprovados, nossa equipe garante <strong>máxima taxa de aprovação e transparência na gestão dos recursos</strong>.</p>
+        </div>
+        <ul class="feat-list">
+          <li>Análise de elegibilidade do projeto</li>
+          <li>Elaboração do dossiê de inscrição</li>
+          <li>Captação de patrocinadores e apoiadores</li>
+          <li>Gestão financeira dos recursos captados</li>
+          <li>Prestação de contas ao órgão financiador</li>
+        </ul>
+        <div style="margin-top:2rem">
+          <a href="../index.html#contato" class="btn-main">Consultar viabilidade <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="svc-panel">
+        <div class="svc-panel-title">Mecanismos disponíveis</div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Proac — SP</div><div class="svc-panel-val">Programa de Ação Cultural do Estado de SP</div></div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Lei Rouanet — Federal</div><div class="svc-panel-val">Mecenato e FNC (Fundo Nacional da Cultura)</div></div>
+        <div class="svc-panel-item"><div class="svc-panel-label">Lei Municipal (SP)</div><div class="svc-panel-val">ISS Cultural e programas locais</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg3)">
+    <div class="s-label reveal">Dúvidas frequentes</div>
+    <h2 class="s-title reveal">O que você precisa saber antes de contratar.</h2>
+    <div class="faq">
+      <div class="faq-item"><div class="faq-q">Qual é o prazo mínimo para contratar um artista?<div class="faq-icon"></div></div><div class="faq-a">Recomendamos no mínimo 60 dias de antecedência para artistas regionais e 90 a 120 dias para artistas de alto cachet ou com agenda nacional intensa.</div></div>
+      <div class="faq-item"><div class="faq-q">Vocês trabalham com todos os gêneros musicais?<div class="faq-icon"></div></div><div class="faq-a">Sim. Nossa rede cobre sertanejo, forró, pagode, funk, pop, MPB, rock, eletrônico e mais. Entre em contato para verificar disponibilidade de artistas específicos.</div></div>
+      <div class="faq-item"><div class="faq-q">Como funciona o pagamento ao artista?<div class="faq-icon"></div></div><div class="faq-a">Normalmente 50% de sinal na assinatura do contrato e 50% na data do evento, conforme condições negociadas. Toda transação é intermediada pela Quinto Continente com rastreabilidade completa.</div></div>
+      <div class="faq-item"><div class="faq-q">Meu projeto pode se beneficiar de leis de incentivo?<div class="faq-icon"></div></div><div class="faq-a">Depende do perfil cultural do evento. Projetos com finalidade cultural, artística ou educacional geralmente são elegíveis. Fazemos uma análise gratuita de viabilidade.</div></div>
+      <div class="faq-item"><div class="faq-q">Vocês atendem eventos em todo o Brasil?<div class="faq-icon"></div></div><div class="faq-a">Sim. Temos cobertura nacional com parceiros logísticos em todas as regiões. Nossa equipe otimiza deslocamentos para reduzir custos operacionais.</div></div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);text-align:center">
+    <div class="s-label reveal" style="justify-content:center;display:flex">Próximo passo</div>
+    <h2 class="s-title reveal" style="margin:0 auto 2rem;text-align:center">Vamos viabilizar o seu evento.</h2>
+    <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap" class="reveal d1">
+      <a href="../index.html#contato" class="btn-main">Solicitar atendimento <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="booking/index.html" class="btn-outline">Fazer booking direto</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div><div class="f-logo">Quinto Continente</div><div class="f-sub">Por Oceania Eventos</div><p class="f-desc">Excelência em entretenimento, gestão e grandes negócios.</p></div>
+      <div><div class="f-col-title">Serviços</div><ul class="f-links"><li><a href="#intermediacao">Intermediação de Shows</a></li><li><a href="#producao">Produção e Assessoria</a></li><li><a href="#especiais">Projetos Especiais</a></li><li><a href="#leis">Leis de Incentivo</a></li></ul></div>
+      <div><div class="f-col-title">Empresa</div><ul class="f-links"><li><a href="../sobre/index.html">Quem Somos</a></li><li><a href="../index.html#diferenciais">Diferenciais</a></li><li><a href="../index.html#contato">Contato</a></li><li><a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a></li></ul></div>
+      <div><div class="f-col-title">Contato</div><ul class="f-links"><li><a href="mailto:contato@quintocontinente.com.br">contato@quintocontinente.com.br</a></li><li><a href="#">(11) 0000-0000</a></li><li><a href="#">São Paulo, SP</a></li></ul></div>
+    </div>
+    <div class="footer-bot"><p>© 2025 Quinto Continente — Por <a href="#">Oceania Eventos</a>. Todos os direitos reservados.</p><p><a href="#">Privacidade</a> &nbsp;·&nbsp; <a href="#">Termos</a></p></div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.querySelectorAll('.faq-q').forEach(function(q){
+      q.addEventListener('click',function(){
+        var item=q.parentElement, open=item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
+        if(!open) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>
