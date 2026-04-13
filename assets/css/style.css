@@ -160,14 +160,16 @@ nav.scrolled {
   padding: calc(var(--nav-h) + 4rem) 3rem 5rem;
   position: relative;
   overflow: hidden;
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: flex-start;
 
   background:
     radial-gradient(ellipse 55% 65% at 78% 18%, rgba(255, 88, 88, 0.08) 0%, transparent 55%),
     radial-gradient(ellipse 35% 45% at 5% 95%, rgba(255, 88, 88, 0.04) 0%, transparent 50%),
-    linear-gradient(rgba(10,10,10,0.4), rgba(10,10,10,0.4)),
+    linear-gradient(rgba(10,10,10,0.3), rgba(10,10,10,0.3)),
     url('../images/bg_principal.avif');
 
   background-size: cover;
