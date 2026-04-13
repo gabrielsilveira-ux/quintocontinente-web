@@ -154,52 +154,6 @@ nav.scrolled {
 }
 .page-hero-sub strong { color: var(--text); font-weight: 400; }
 
-/* ── HERO (com imagem de fundo) ───────────────────────────── */
-.hero {
-  min-height: 100vh;
-  padding: calc(var(--nav-h) + 4rem) 3rem 5rem;
-  position: relative;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  background:
-    radial-gradient(ellipse 55% 65% at 78% 18%, rgba(255, 88, 88, 0.08) 0%, transparent 55%),
-    radial-gradient(ellipse 35% 45% at 5% 95%, rgba(255, 88, 88, 0.04) 0%, transparent 50%),
-    linear-gradient(rgba(10,10,10,0.3), rgba(10,10,10,0.3)),
-    url('../images/bg_principal.avif');
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* título do hero */
-.hero h1 {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(3rem, 5.8vw, 6rem);
-  font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.035em;
-  color: var(--text);
-  max-width: 880px;
-  margin-bottom: 3rem;
-  position: relative;
-  z-index: 1;
-}
-
-/* highlight */
-.hero h1 .hl {
-  color: var(--bg);
-  background: var(--accent);
-  padding: 0.02em 0.1em;
-  display: inline;
-  line-height: 1.1;
-}
-
 /* Breadcrumb */
 .breadcrumb {
   display: flex; align-items: center; gap: 0.5rem;
