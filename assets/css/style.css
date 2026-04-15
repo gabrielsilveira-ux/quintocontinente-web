@@ -132,27 +132,50 @@ nav.scrolled {
 /* ── Page header (inner pages) ─────────────────────────────── */
 .page-hero {
   padding: calc(var(--nav-h) + 4rem) 3rem 5rem;
+  
+  /* separação visual do hero principal */
+  margin-top: 2rem;
+
   background: var(--bg2);
   border-bottom: 1px solid var(--line2);
+
+  position: relative;
+  z-index: 2;
 }
+
 .page-hero-label {
   font-family: 'Syne', sans-serif;
-  font-size: 0.62rem; font-weight: 700;
-  letter-spacing: 0.28em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 1.2rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
 }
+
 .page-hero h1 {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(2rem, 4vw, 3.8rem); font-weight: 800;
-  line-height: 1.0; letter-spacing: -0.03em;
-  color: var(--text); max-width: 720px;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  max-width: 720px;
   margin-bottom: 1.5rem;
 }
+
 .page-hero-sub {
-  font-size: 1rem; font-weight: 300;
-  line-height: 1.8; color: var(--muted2); max-width: 560px;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--muted2);
+  max-width: 560px;
 }
-.page-hero-sub strong { color: var(--text); font-weight: 400; }
+
+.page-hero-sub strong {
+  color: var(--text);
+  font-weight: 400;
+}
 
 /* ── HERO (com imagem de fundo) ───────────────────────────── */
 .hero {
@@ -166,15 +189,39 @@ nav.scrolled {
   justify-content: center;
   align-items: flex-start;
 
-  background:
-    radial-gradient(ellipse 55% 65% at 78% 18%, rgba(255, 88, 88, 0.08) 0%, transparent 55%),
-    radial-gradient(ellipse 35% 45% at 5% 95%, rgba(255, 88, 88, 0.04) 0%, transparent 50%),
-    linear-gradient(rgba(10,10,10,0.3), rgba(10,10,10,0.3)),
-    url('../images/bg_principal.avif');
+  background-color: #0a0a0a;
+
+  background-image:
+    radial-gradient(ellipse 55% 65% at 78% 18%, rgba(255, 88, 88, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 35% 45% at 5% 95%, rgba(255, 88, 88, 0.03) 0%, transparent 50%),
+    linear-gradient(rgba(10,10,10,0.2), rgba(10,10,10,0.2)),
+    url('/images/bg_principal.avif'); /* caminho absoluto */
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* overlay suave para transição */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0.2) 0%,
+    rgba(10,10,10,0.6) 70%,
+    #0a0a0a 100%
+  );
+
+  z-index: 0;
+}
+
+/* garante conteúdo acima do overlay */
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* título do hero */
@@ -187,8 +234,6 @@ nav.scrolled {
   color: var(--text);
   max-width: 880px;
   margin-bottom: 3rem;
-  position: relative;
-  z-index: 1;
 }
 
 /* highlight */
@@ -202,13 +247,27 @@ nav.scrolled {
 
 /* Breadcrumb */
 .breadcrumb {
-  display: flex; align-items: center; gap: 0.5rem;
-  font-size: 0.75rem; color: var(--muted2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--muted2);
   margin-bottom: 2.5rem;
 }
-.breadcrumb a { color: var(--muted2); text-decoration: none; transition: color .2s; }
-.breadcrumb a:hover { color: var(--text); }
-.breadcrumb span { color: var(--muted); }
+
+.breadcrumb a {
+  color: var(--muted2);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.breadcrumb a:hover {
+  color: var(--text);
+}
+
+.breadcrumb span {
+  color: var(--muted);
+}
 
 /* ── Sections ──────────────────────────────────────────────── */
 section { padding: 7rem 3rem; }
