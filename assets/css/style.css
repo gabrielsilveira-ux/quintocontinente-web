@@ -195,7 +195,7 @@ nav.scrolled {
     radial-gradient(ellipse 55% 65% at 78% 18%, rgba(255, 88, 88, 0.06) 0%, transparent 55%),
     radial-gradient(ellipse 35% 45% at 5% 95%, rgba(255, 88, 88, 0.03) 0%, transparent 50%),
     linear-gradient(rgba(10,10,10,0.2), rgba(10,10,10,0.2)),
-    url('/images/bg_principal.avif'); /* caminho absoluto */
+    url('../images/bg_principal.avif'); /* caminho absoluto */
 
   background-size: cover;
   background-position: center;
