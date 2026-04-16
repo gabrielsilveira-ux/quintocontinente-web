@@ -1,0 +1,17 @@
+/*
+Theme Name: Quinto Continente
+Theme URI: https://quintocontinente.com.br
+Author: Quinto Continente
+Author URI: https://quintocontinente.com.br
+Description: Tema base institucional WordPress para a Quinto Continente.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.8
+Requires PHP: 7.4
+Text Domain: quinto-continente
+*/
+
+/*
+ * Este arquivo identifica o tema no WordPress.
+ * Os estilos principais são carregados via enqueue em functions.php.
+ */
