@@ -196,7 +196,6 @@ section { padding: 7rem 3rem; }
   padding: 1rem 2rem; border-radius: 100px;
   text-decoration: none; border: none; cursor: none;
   transition: transform .25s, box-shadow .25s;
-  white-space: nowrap;
 }
 .btn-main:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(255,88,88,0.3); }
 .btn-main .arr { transition: transform .2s; }
@@ -431,8 +430,11 @@ footer {
   .nav-hamburger { display: flex; }
   nav, section, footer, .page-hero { padding-left: 1.5rem; padding-right: 1.5rem; }
   .card-grid-2, .card-grid-3, .card-grid-4 { grid-template-columns: 1fr; }
+  .card { padding: 2.5rem 1.5rem; }
+  .stat-row { padding: 1.25rem 1rem; flex-direction: column; align-items: flex-start; gap: .75rem; }
+  .form-box { padding: 2rem 1.5rem; }
   .form-row { grid-template-columns: 1fr; }
-  .footer-top { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bot { flex-direction: column; gap: 0.5rem; text-align: center; }
-  .blog-strip { flex-direction: column; align-items: flex-start; }
+  .blog-strip { flex-direction: column; align-items: flex-start; padding: 1.5rem; }
 }

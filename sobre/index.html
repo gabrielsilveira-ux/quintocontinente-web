@@ -27,7 +27,12 @@
     .valor-num { font-family:'Syne',sans-serif; font-size:3rem; font-weight:800; color:var(--line2); line-height:1; margin-bottom:1rem; }
     .valor-title { font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:var(--text); margin-bottom:.6rem; }
     .valor-desc { font-size:.85rem; font-weight:300; line-height:1.75; color:var(--muted2); }
-    @media(max-width:768px){ .team-grid{grid-template-columns:1fr 1fr} .valores-grid{grid-template-columns:1fr} }
+    @media(max-width:768px){ 
+      .team-grid{grid-template-columns:1fr; gap:1rem;} 
+      .valores-grid{grid-template-columns:1fr;} 
+      .valor { padding: 1.5rem; } 
+      .tl-item { grid-template-columns: 60px 1px 1fr; gap: 0 1.25rem; }
+    }
   </style>
 </head>
 <body>
