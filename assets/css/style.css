@@ -74,7 +74,7 @@ nav.scrolled {
   list-style: none;
 }
 .nav-links a {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.72rem; font-weight: 500;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--muted2); text-decoration: none;
@@ -84,7 +84,7 @@ nav.scrolled {
 .nav-links a.active { color: var(--text); }
 .nav-links a.active { border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
 .nav-btn {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.7rem; font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--bg); background: var(--accent);
@@ -124,7 +124,7 @@ nav.scrolled {
 }
 .nav-mobile.open { display: flex; }
 .nav-mobile a {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 2rem; font-weight: 800;
   letter-spacing: -0.02em; color: var(--text);
   text-decoration: none; transition: color .2s;
@@ -139,13 +139,13 @@ nav.scrolled {
   border-bottom: 1px solid var(--line2);
 }
 .page-hero-label {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.62rem; font-weight: 700;
   letter-spacing: 0.28em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 1.2rem;
 }
 .page-hero h1 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2rem, 4vw, 3.8rem); font-weight: 800;
   line-height: 1.0; letter-spacing: -0.03em;
   color: var(--text); max-width: 720px;
@@ -171,13 +171,13 @@ nav.scrolled {
 section { padding: 7rem 3rem; }
 
 .s-label {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.62rem; font-weight: 700;
   letter-spacing: 0.28em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 1.2rem;
 }
 .s-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2rem, 3.8vw, 3.4rem); font-weight: 800;
   line-height: 1.0; letter-spacing: -0.03em;
   color: var(--text); max-width: 700px;
@@ -192,7 +192,7 @@ section { padding: 7rem 3rem; }
 /* ── Buttons ───────────────────────────────────────────────── */
 .btn-main {
   display: inline-flex; align-items: center; gap: 0.75rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.75rem; font-weight: 700;
   letter-spacing: 0.07em; text-transform: uppercase;
   color: var(--bg); background: var(--accent);
@@ -206,7 +206,7 @@ section { padding: 7rem 3rem; }
 
 .btn-outline {
   display: inline-flex; align-items: center; gap: 0.75rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.75rem; font-weight: 700;
   letter-spacing: 0.07em; text-transform: uppercase;
   color: var(--text); background: transparent;
@@ -242,7 +242,7 @@ section { padding: 7rem 3rem; }
 }
 .card:hover .card-bar { width: 100%; }
 .card-idx {
-  font-family: 'Outfit', sans-serif; font-size: 0.65rem;
+  font-family: 'Space Grotesk', sans-serif; font-size: 0.65rem;
   font-weight: 600; letter-spacing: 0.12em; color: var(--muted);
   margin-bottom: 1.75rem;
 }
@@ -257,7 +257,7 @@ section { padding: 7rem 3rem; }
 .card-icon svg { width: 16px; height: 16px; stroke: var(--muted2); transition: stroke .3s; }
 .card:hover .card-icon svg { stroke: var(--accent); }
 .card-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.15rem; font-weight: 700;
   color: var(--text); margin-bottom: 0.8rem;
   letter-spacing: -0.02em;
@@ -269,7 +269,7 @@ section { padding: 7rem 3rem; }
 .card-link {
   display: inline-flex; align-items: center; gap: 0.5rem;
   margin-top: 1.5rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.68rem; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--accent); text-decoration: none;
@@ -288,13 +288,13 @@ section { padding: 7rem 3rem; }
 .stat-row:last-child { border-bottom: none; }
 .stat-row:hover { background: var(--surface); }
 .stat-num {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 2rem; font-weight: 800;
   letter-spacing: -0.04em; color: var(--accent);
   min-width: 72px; line-height: 1;
 }
 .stat-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.875rem; font-weight: 600; color: var(--text); margin-bottom: 0.2rem;
 }
 .stat-sub { font-size: 0.78rem; font-weight: 300; color: var(--muted2); }
@@ -302,7 +302,7 @@ section { padding: 7rem 3rem; }
 /* ── Diferencial pill ──────────────────────────────────────── */
 .dif-pill {
   display: inline-block;
-  font-family: 'Outfit', sans-serif; font-size: 0.58rem;
+  font-family: 'Space Grotesk', sans-serif; font-size: 0.58rem;
   font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--accent); background: var(--accent-dim);
   padding: 0.28rem 0.65rem; border-radius: 100px;
@@ -318,7 +318,7 @@ section { padding: 7rem 3rem; }
 .fg { margin-bottom: 1rem; }
 .fl {
   display: block;
-  font-family: 'Outfit', sans-serif; font-size: 0.62rem; font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif; font-size: 0.62rem; font-weight: 700;
   letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--muted2); margin-bottom: 0.45rem;
 }
@@ -341,7 +341,7 @@ section { padding: 7rem 3rem; }
 .btn-form {
   width: 100%;
   display: flex; align-items: center; justify-content: center; gap: 0.7rem;
-  font-family: 'Outfit', sans-serif; font-size: 0.78rem; font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--bg); background: var(--accent);
   padding: 1.05rem 2rem; border-radius: 10px;
@@ -354,7 +354,7 @@ section { padding: 7rem 3rem; }
 .form-ok {
   display: none; text-align: center; margin-top: 0.85rem;
   font-size: 0.78rem; color: var(--accent);
-  font-family: 'Outfit', sans-serif; letter-spacing: 0.05em;
+  font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.05em;
 }
 
 /* ── Footer ────────────────────────────────────────────────── */
@@ -367,7 +367,7 @@ footer {
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
   padding-bottom: 3rem; border-bottom: 1px solid var(--line); margin-bottom: 1.75rem;
 }
-.f-logo { font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--text); margin-bottom: 0.2rem; }
+.f-logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--text); margin-bottom: 0.2rem; }
 .f-sub { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
 .f-desc { font-size: 0.83rem; font-weight: 300; color: var(--muted); line-height: 1.7; max-width: 250px; margin-bottom: 1.5rem; }
 .f-social { display: flex; gap: 0.5rem; }
@@ -379,7 +379,7 @@ footer {
 .f-s:hover { border-color: var(--accent); background: var(--accent-dim); }
 .f-s svg { width: 13px; height: 13px; fill: var(--muted2); }
 .f-col-title {
-  font-family: 'Outfit', sans-serif; font-size: 0.62rem; font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif; font-size: 0.62rem; font-weight: 700;
   letter-spacing: 0.2em; text-transform: uppercase; color: var(--text); margin-bottom: 1.2rem;
 }
 .f-links { list-style: none; }
@@ -402,7 +402,7 @@ footer {
 /* ── Chips / tags ──────────────────────────────────────────── */
 .chips { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 .chip {
-  font-family: 'Outfit', sans-serif; font-size: 0.62rem; font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif; font-size: 0.62rem; font-weight: 600;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--muted2); border: 1px solid var(--line2);
   padding: 0.35rem 0.85rem; border-radius: 100px;
