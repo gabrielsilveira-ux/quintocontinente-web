@@ -1,25 +1,9 @@
 (function () {
   'use strict';
 
-  /* Cursor */
+  /* Cursor (Removido) */
   function initCursor() {
-    var cur = document.getElementById('cur');
-    var curR = document.getElementById('curR');
-    if (!cur || !curR) return;
-    var mx=0,my=0,rx=0,ry=0;
-    document.addEventListener('mousemove',function(e){
-      mx=e.clientX; my=e.clientY;
-      cur.style.left=mx+'px'; cur.style.top=my+'px';
-    });
-    (function animR(){
-      rx+=(mx-rx)*0.14; ry+=(my-ry)*0.14;
-      curR.style.left=rx+'px'; curR.style.top=ry+'px';
-      requestAnimationFrame(animR);
-    })();
-    document.querySelectorAll('a,button,.card,.stat-row,.svc,.dif,input,textarea,select').forEach(function(el){
-      el.addEventListener('mouseenter',function(){cur.style.width='14px';cur.style.height='14px';curR.style.width='48px';curR.style.height='48px';});
-      el.addEventListener('mouseleave',function(){cur.style.width='8px';cur.style.height='8px';curR.style.width='36px';curR.style.height='36px';});
-    });
+    // Cursor customizado removido a pedido do usuário
   }
 
   /* Scroll reveal */
