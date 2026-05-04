@@ -1,24 +1,34 @@
 (function () {
   'use strict';
 
-  /* Cursor */
-  function initCursor() {
-    var cur = document.getElementById('cur');
-    var curR = document.getElementById('curR');
-    if (!cur || !curR) return;
-    var mx=0,my=0,rx=0,ry=0;
-    document.addEventListener('mousemove',function(e){
-      mx=e.clientX; my=e.clientY;
-      cur.style.left=mx+'px'; cur.style.top=my+'px';
-    });
-    (function animR(){
-      rx+=(mx-rx)*0.14; ry+=(my-ry)*0.14;
-      curR.style.left=rx+'px'; curR.style.top=ry+'px';
-      requestAnimationFrame(animR);
-    })();
-    document.querySelectorAll('a,button,.card,.stat-row,.svc,.dif,input,textarea,select').forEach(function(el){
-      el.addEventListener('mouseenter',function(){cur.style.width='14px';cur.style.height='14px';curR.style.width='48px';curR.style.height='48px';});
-      el.addEventListener('mouseleave',function(){cur.style.width='8px';cur.style.height='8px';curR.style.width='36px';curR.style.height='36px';});
+  /* Theme Toggle */
+  function initTheme() {
+    var btn = document.getElementById('themeToggle');
+    var icon = document.getElementById('themeIcon');
+    if (!btn || !icon) return;
+    
+    var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    
+    function updateIcon() {
+      if (isLight) {
+        icon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+      } else {
+        icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+      }
+    }
+    
+    updateIcon();
+    
+    btn.addEventListener('click', function() {
+      isLight = !isLight;
+      if (isLight) {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('qc_theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('qc_theme', 'dark');
+      }
+      updateIcon();
     });
   }
 
@@ -99,7 +109,7 @@
 
   /* Boot */
   function boot() {
-    initCursor();
+    initTheme();
     initReveal();
     initNavScroll();
     initAnchors();

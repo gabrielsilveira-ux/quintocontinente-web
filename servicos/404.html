@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página não encontrada – Quinto Continente</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     .err-page { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:2rem; }
@@ -13,14 +13,12 @@
     .err-title { font-family:'Syne',sans-serif; font-size:clamp(1.4rem,3vw,2rem); font-weight:700; color:var(--text); margin-bottom:1rem; }
     .err-sub { font-size:.95rem; font-weight:300; color:var(--muted2); max-width:400px; line-height:1.75; margin-bottom:2.5rem; }
   </style>
+  <script>if(localStorage.getItem('qc_theme')==='light') document.documentElement.setAttribute('data-theme','light');</script>
 </head>
 <body>
-  <div id="cur" class="cursor"></div>
-  <div id="curR" class="cursor-ring"></div>
   <nav id="nav">
     <a href="index.html" class="nav-logo" style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text)">Quinto Continente</a>
   </nav>
-
   <div class="err-page">
     <div class="err-num">4<span>0</span>4</div>
     <h1 class="err-title">Página não encontrada</h1>
@@ -30,7 +28,10 @@
       <a href="servicos/index.html" class="btn-outline">Ver nossos serviços</a>
     </div>
   </div>
-
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+

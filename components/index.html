@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quinto Continente – Hub Estratégico de Entretenimento</title>
   <meta name="description" content="Conectamos grandes artistas ao seu palco com segurança operacional e expertise técnica da Oceania Eventos.">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/media.css">
+  <script>if(localStorage.getItem('qc_theme')==='light') document.documentElement.setAttribute('data-theme','light');</script>
 </head>
 <body>
-
-  <div id="cur" class="cursor"></div>
-  <div id="curR" class="cursor-ring"></div>
   <nav id="nav">
     <a href="index.html" class="nav-logo">
       <img src="assets/images/logo.png" alt="Quinto Continente" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\'font-family:Syne,sans-serif;font-size:1.1rem;font-weight:800;color:var(--text)\'>Quinto Continente</span>')">
@@ -20,24 +18,20 @@
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="sobre/index.html">Quem Somos</a></li>
-      <li><a href="servicos/index.html">Serviços</a></li>
-      <li><a href="#diferenciais">Diferenciais</a></li>
-      <li><a href="#midia">Galeria</a></li>
       <li><a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a></li>
     </ul>
-    <a href="#contato" class="nav-btn">Consultar Agenda</a>
-    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <a href="#contato" class="nav-btn">Consultar Agenda</a>
+      <button class="theme-toggle" aria-label="Alternar tema" id="themeToggle"><svg id="themeIcon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
+      <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </nav>
   <div class="nav-mobile">
     <a href="index.html">Home</a>
     <a href="sobre/index.html">Quem Somos</a>
-    <a href="servicos/index.html">Serviços</a>
-    <a href="#diferenciais">Diferenciais</a>
-    <a href="#midia">Galeria</a>
     <a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a>
     <a href="#contato" style="color:var(--accent)">Consultar Agenda</a>
   </div>
-
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
@@ -54,7 +48,6 @@
     </div>
     <div class="hero-rule"></div>
   </section>
-
   <!-- BANNER ROTATIVO
        Para adicionar conteúdo em cada slide:
        - Imagem: <img class="banner-media" src="SUA-IMAGEM.jpg" alt="descrição">
@@ -63,7 +56,6 @@
   -->
   <div class="banner-section">
     <div class="banner-slider" id="bannerSlider">
-
       <div class="banner-slide active">
         <!-- Substitua pelo conteúdo do Banner 1 -->
         <div class="banner-ph"><div class="banner-ph-icon"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div><span>Banner 1 — Adicione imagem ou vídeo aqui</span></div>
@@ -75,7 +67,6 @@
           <a href="#contato" class="btn-main">Consultar disponibilidade <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
-
       <div class="banner-slide">
         <!-- Substitua pelo conteúdo do Banner 2 -->
         <div class="banner-ph"><div class="banner-ph-icon"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><path d="m15 10 5 3-5 3V10z"/><rect x="2" y="7" width="13" height="10" rx="2"/></svg></div><span>Banner 2 — Adicione imagem ou vídeo aqui</span></div>
@@ -87,7 +78,6 @@
           <a href="servicos/index.html" class="btn-main">Ver nossos serviços <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
-
       <div class="banner-slide">
         <!-- Substitua pelo conteúdo do Banner 3 -->
         <div class="banner-ph"><div class="banner-ph-icon"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><polygon points="12,2 22,20 2,20"/></svg></div><span>Banner 3 — Adicione imagem ou vídeo aqui</span></div>
@@ -99,7 +89,6 @@
           <a href="servicos/index.html#especiais" class="btn-main">Saiba mais <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
-
       <div class="banner-progress" id="bannerProgress"></div>
       <div class="banner-controls">
         <button class="banner-btn" id="bannerPrev" aria-label="Anterior"><svg viewBox="0 0 16 16" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4l-4 4 4 4"/></svg></button>
@@ -112,7 +101,6 @@
       </div>
     </div>
   </div>
-
   <!-- SOBRE -->
   <section class="sobre" id="sobre">
     <div class="s-label reveal">Quem Somos</div>
@@ -128,58 +116,6 @@
         <div class="stat-row"><div class="stat-num">A+</div><div><div class="stat-title">Chancela Institucional</div><div class="stat-sub">Segurança jurídica em todas as etapas</div></div></div>
         <div class="stat-row"><div class="stat-num">BR</div><div><div class="stat-title">Cobertura Nacional</div><div class="stat-sub">Inteligência de rota em todo o país</div></div></div>
       </div>
-    </div>
-  </section>
-
-  <!-- GALERIA DE MÍDIA
-       Para adicionar imagens/vídeos:
-       - Imagem: substitua <div class="midia-ph"> por <img src="foto.jpg" alt="descrição">
-       - Vídeo:  substitua <div class="midia-ph"> por <video src="video.mp4" muted loop></video>
-       - Edite o texto em .midia-hover-label com o título de cada item
-  -->
-  <section class="midia-section" id="midia">
-    <div class="s-label reveal">Galeria</div>
-    <h2 class="s-title reveal">Momentos que definem a excelência em entretenimento.</h2>
-    <div class="midia-grid reveal">
-
-      <div class="midia-item midia-large" data-type="image">
-        <!-- Imagem principal (ocupa 2 colunas) — Substitua o midia-ph abaixo -->
-        <div class="midia-ph"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Imagem principal — 2 colunas</span></div>
-        <div class="midia-hover"><div class="midia-hover-label">Show em destaque</div></div>
-      </div>
-
-      <div class="midia-item" data-type="video">
-        <!-- Vídeo 1 — Substitua o midia-ph abaixo -->
-        <div class="midia-ph"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><path d="m15 10 5 3-5 3V10z"/><rect x="2" y="7" width="13" height="10" rx="2"/></svg><span>Vídeo destaque</span></div>
-        <div class="midia-play-icon"><svg viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div>
-        <div class="midia-hover"><div class="midia-hover-label">Assista ao vídeo</div></div>
-      </div>
-
-      <div class="midia-item" data-type="image">
-        <!-- Foto 2 — Substitua o midia-ph abaixo -->
-        <div class="midia-ph"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Foto do evento</span></div>
-        <div class="midia-hover"><div class="midia-hover-label">Evento corporativo</div></div>
-      </div>
-
-      <div class="midia-item" data-type="image">
-        <!-- Foto 3 — Substitua o midia-ph abaixo -->
-        <div class="midia-ph"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Foto do evento</span></div>
-        <div class="midia-hover"><div class="midia-hover-label">Palco e produção</div></div>
-      </div>
-
-      <div class="midia-item" data-type="video">
-        <!-- Vídeo 2 — Substitua o midia-ph abaixo -->
-        <div class="midia-ph"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><path d="m15 10 5 3-5 3V10z"/><rect x="2" y="7" width="13" height="10" rx="2"/></svg><span>Vídeo — bastidores</span></div>
-        <div class="midia-play-icon"><svg viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div>
-        <div class="midia-hover"><div class="midia-hover-label">Bastidores do show</div></div>
-      </div>
-
-      <div class="midia-item" data-type="image">
-        <!-- Foto 4 — Substitua o midia-ph abaixo -->
-        <div class="midia-ph"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Foto do evento</span></div>
-        <div class="midia-hover"><div class="midia-hover-label">Show ao vivo</div></div>
-      </div>
-
     </div>
   </section>
 
@@ -209,7 +145,6 @@
       </div>
     </div>
   </section>
-
   <!-- SERVIÇOS -->
   <section class="servicos" id="servicos">
     <div class="servicos-hd">
@@ -223,7 +158,6 @@
       <div class="card reveal d3"><div class="card-bar"></div><div class="card-idx">04 / 04</div><div class="card-icon"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke-width="1.5"/><path d="M5.5 8.5S6 10 8 10s2.5-1.5 2.5-1.5" stroke-width="1.5" stroke-linecap="round"/><circle cx="6" cy="6.5" r=".8" fill="currentColor" stroke="none"/><circle cx="10" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg></div><h3 class="card-title">Leis de Incentivo</h3><p class="card-desc">Consultoria especializada para viabilização de projetos via Proac e Lei Rouanet. Captação de recursos com segurança jurídica.</p><a href="servicos/index.html#leis" class="card-link">Ver mais →</a></div>
     </div>
   </section>
-
   <!-- DIFERENCIAIS -->
   <section class="diferenciais" id="diferenciais">
     <div class="s-label reveal">Diferenciais</div>
@@ -235,7 +169,6 @@
       <div class="dif reveal d3"><div class="dif-pill">Resultado</div><h4 class="dif-title">Gestão de Resultados</h4><p class="dif-desc">Foco absoluto na entrega de um evento inesquecível e financeiramente saudável. Entretenimento como negócio de precisão.</p></div>
     </div>
   </section>
-
   <!-- CONTATO -->
   <section class="contato" id="contato">
     <div class="s-label reveal">Contato</div>
@@ -262,7 +195,6 @@
       </div>
     </div>
   </section>
-
   <footer>
     <div class="footer-top">
       <div>
@@ -275,7 +207,7 @@
         </div>
       </div>
       <div><div class="f-col-title">Serviços</div><ul class="f-links"><li><a href="servicos/index.html#intermediacao">Intermediação de Shows</a></li><li><a href="servicos/index.html#producao">Produção e Assessoria</a></li><li><a href="servicos/index.html#especiais">Projetos Especiais</a></li><li><a href="servicos/index.html#leis">Leis de Incentivo</a></li></ul></div>
-      <div><div class="f-col-title">Empresa</div><ul class="f-links"><li><a href="sobre/index.html">Quem Somos</a></li><li><a href="#diferenciais">Diferenciais</a></li><li><a href="#midia">Galeria</a></li><li><a href="#contato">Contato</a></li><li><a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a></li></ul></div>
+      <div><div class="f-col-title">Empresa</div><ul class="f-links"><li><a href="sobre/index.html">Quem Somos</a></li><li><a href="#diferenciais">Diferenciais</a></li><li><a href="galeria/index.html">Galeria</a></li><li><a href="#contato">Contato</a></li><li><a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a></li></ul></div>
       <div><div class="f-col-title">Contato</div><ul class="f-links"><li><a href="mailto:contato@quintocontinente.com.br">contato@quintocontinente.com.br</a></li><li><a href="tel:+5511000000000">(11) 0000-0000</a></li><li><a href="#">São Paulo, SP</a></li></ul></div>
     </div>
     <div class="footer-bot">
@@ -283,8 +215,10 @@
       <p><a href="#">Privacidade</a> &nbsp;·&nbsp; <a href="#">Termos</a></p>
     </div>
   </footer>
-
   <script src="assets/js/main.js"></script>
   <script src="assets/js/banner.js"></script>
 </body>
 </html>
+
+
+
