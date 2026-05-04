@@ -24,7 +24,7 @@
   --nav-h:      88px;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 
 body {
   font-family: 'Inter', sans-serif;
@@ -72,7 +72,7 @@ nav.scrolled {
   border-bottom: 1px solid var(--line2);
 }
 .nav-logo { text-decoration: none; display: flex; align-items: center; }
-.nav-logo img { height: 52px; display: block; }
+.nav-logo img { height: 72px; display: block; transition: height .3s; }
 .nav-links {
   display: flex; align-items: center; gap: 2.5rem;
   list-style: none;
@@ -426,6 +426,8 @@ footer {
 }
 
 @media (max-width: 768px) {
+  #cur, #curR { display: none !important; }
+  .nav-logo img { height: 60px; }
   .nav-links, .nav-btn { display: none; }
   .nav-hamburger { display: flex; }
   nav, section, footer, .page-hero { padding-left: 1.5rem; padding-right: 1.5rem; }
