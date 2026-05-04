@@ -442,3 +442,102 @@ footer {
   .footer-bot { flex-direction: column; gap: 0.5rem; text-align: center; }
   .blog-strip { flex-direction: column; align-items: flex-start; padding: 1.5rem; }
 }
+
+/* ── Artistas ──────────────────────────────────────────────── */
+.artistas-marquee-section {
+  padding: 4rem 0;
+  background: var(--bg);
+  overflow: hidden;
+  position: relative;
+}
+.marquee-container {
+  display: flex;
+  gap: 2rem;
+}
+.marquee-track {
+  display: flex;
+  gap: 2rem;
+  animation: marquee 60s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.artist-card {
+  flex: 0 0 280px;
+  background: var(--bg2);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  transition: transform 0.3s, border-color 0.3s;
+}
+.artist-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+.artist-img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: var(--bg3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.artist-img svg {
+  width: 40px;
+  height: 40px;
+  color: var(--muted);
+}
+.artist-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+.artist-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Artists Page Grid */
+.artists-page-section {
+  padding: 4rem 2rem 8rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.search-container {
+  margin-bottom: 4rem;
+  position: relative;
+}
+.search-input {
+  width: 100%;
+  background: var(--bg2);
+  border: 1px solid var(--line2);
+  padding: 1.2rem 2rem;
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+@media (max-width: 768px) {
+  .artists-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  .artist-card { flex: 0 0 240px; }
+}
+

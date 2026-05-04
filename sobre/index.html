@@ -4,46 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quem Somos – Quinto Continente</title>
-  <meta name="description" content="Conheça a história, missão e valores da Quinto Continente, hub estratégico de entretenimento da Oceania Eventos.">
+  <meta name="description" content="Saiba mais sobre a Quinto Continente e nossa expertise em entretenimento.">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <style>
-    .timeline { margin-top:5rem; }
-    .tl-item { display:grid; grid-template-columns:80px 1px 1fr; gap:0 2rem; padding-bottom:3rem; }
-    .tl-year { font-family:'Syne',sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.1em; color:var(--accent); padding-top:4px; text-align:right; }
-    .tl-line { background:var(--line2); position:relative; }
-    .tl-line::before { content:''; position:absolute; top:6px; left:-4px; width:9px; height:9px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 3px rgba(255,88,88,.15); }
-    .tl-title { font-family:'Syne',sans-serif; font-size:1.05rem; font-weight:700; color:var(--text); margin-bottom:.5rem; }
-    .tl-desc { font-size:.875rem; font-weight:300; line-height:1.75; color:var(--muted2); }
-    .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:4rem; }
-    .team-card { background:var(--bg3); border:1px solid var(--line2); border-radius:var(--radius-lg); padding:2rem; text-align:center; transition:border-color .3s; }
-    .team-card:hover { border-color:var(--accent); }
-    .team-avatar { width:72px; height:72px; border-radius:50%; background:var(--surface); margin:0 auto 1.25rem; display:flex; align-items:center; justify-content:center; font-family:'Syne',sans-serif; font-size:1.5rem; font-weight:800; color:var(--accent); }
-    .team-name { font-family:'Syne',sans-serif; font-size:.95rem; font-weight:700; color:var(--text); margin-bottom:.25rem; }
-    .team-role { font-size:.78rem; font-weight:300; color:var(--muted2); }
-    .valores-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; margin-top:4rem; background:var(--line2); border:1px solid var(--line2); border-radius:var(--radius-lg); overflow:hidden; }
-    .valor { background:var(--bg2); padding:2.5rem; transition:background .3s; }
-    .valor:hover { background:var(--bg3); }
-    .valor-num { font-family:'Syne',sans-serif; font-size:3rem; font-weight:800; color:var(--line2); line-height:1; margin-bottom:1rem; }
-    .valor-title { font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:var(--text); margin-bottom:.6rem; }
-    .valor-desc { font-size:.85rem; font-weight:300; line-height:1.75; color:var(--muted2); }
-    @media(max-width:768px){ 
-      .team-grid{grid-template-columns:1fr; gap:1rem;} 
-      .valores-grid{grid-template-columns:1fr;} 
-      .valor { padding: 1.5rem; } 
-      .tl-item { grid-template-columns: 60px 1px 1fr; gap: 0 1.25rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/media.css">
   <script>if(localStorage.getItem('qc_theme')==='light') document.documentElement.setAttribute('data-theme','light');</script>
 </head>
 <body>
   <nav id="nav">
     <a href="../index.html" class="nav-logo">
-      <img src="../assets/images/logo.png" alt="Quinto Continente" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\'font-family:Syne,sans-serif;font-size:1.1rem;font-weight:800;color:var(--text)\'>Quinto Continente</span>')">
+      <img src="../assets/images/logo.png" alt="Quinto Continente" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\'font-family:Space Grotesk,sans-serif;font-size:1.1rem;font-weight:800;color:var(--text)\'>Quinto Continente</span>')">
     </a>
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="index.html" class="active">Quem Somos</a></li>
+      <li><a href="../artistas/index.html">Artistas</a></li>
       <li><a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a></li>
     </ul>
     <div style="display:flex; align-items:center; gap:1rem;">
@@ -54,66 +29,36 @@
   </nav>
   <div class="nav-mobile">
     <a href="../index.html">Home</a>
-    <a href="index.html">Quem Somos</a>
+    <a href="index.html" class="active">Quem Somos</a>
+    <a href="../artistas/index.html">Artistas</a>
     <a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a>
     <a href="../index.html#contato" style="color:var(--accent)">Consultar Agenda →</a>
   </div>
+
   <div class="page-hero">
     <div class="breadcrumb"><a href="../index.html">Home</a><span>/</span><span>Quem Somos</span></div>
-    <div class="page-hero-label">A empresa</div>
-    <h1>A força que conecta artistas e palcos com precisão.</h1>
-    <p class="page-hero-sub">Nascemos dentro da <strong>Oceania Eventos</strong> com uma missão clara: ser o elo estratégico entre os maiores nomes do entretenimento brasileiro e os eventos que merecem esse nível de excelência.</p>
+    <div class="page-hero-label">Nossa História</div>
+    <h1>Expertise que transforma entretenimento em negócios.</h1>
+    <p class="page-hero-sub">Unimos a força operacional da Oceania Eventos à gestão estratégica de parcerias artísticas.</p>
   </div>
-  <section style="background:var(--bg)">
-    <div class="s-label reveal">Nossa história</div>
-    <h2 class="s-title reveal">Construída sobre anos de mercado e confiança.</h2>
-    <div class="timeline">
-      <div class="tl-item reveal"><div class="tl-year">2012</div><div class="tl-line"></div><div><h3 class="tl-title">Fundação da Oceania Eventos</h3><p class="tl-desc">A Oceania Eventos nasce em São Paulo com foco em produção técnica de médio e grande porte, construindo uma reputação de excelência operacional no mercado nacional.</p></div></div>
-      <div class="tl-item reveal d1"><div class="tl-year">2017</div><div class="tl-line"></div><div><h3 class="tl-title">Expansão para shows de grande porte</h3><p class="tl-desc">Primeiras parcerias com artistas do cenário sertanejo e pop nacional, desenvolvendo expertise em gestão de riders técnicos e logística de turnê.</p></div></div>
-      <div class="tl-item reveal d2"><div class="tl-year">2021</div><div class="tl-line"></div><div><h3 class="tl-title">Especialização em Leis de Incentivo</h3><p class="tl-desc">Desenvolvimento de expertise em Proac e Lei Rouanet, ampliando o acesso de contratantes a recursos públicos para financiamento de eventos culturais.</p></div></div>
-      <div class="tl-item reveal d3"><div class="tl-year">2024</div><div class="tl-line"></div><div><h3 class="tl-title">Criação da Quinto Continente</h3><p class="tl-desc">Nasce o hub estratégico, centralizando toda a operação de intermediação e assessoria artística sob uma marca dedicada e uma equipe especializada.</p></div></div>
+
+  <section class="sobre-page-section">
+    <div class="sobre-content reveal">
+      <p>A Quinto Continente nasceu de uma necessidade latente do mercado: a profissionalização extrema na conexão entre contratantes e grandes artistas. Como braço estratégico da <strong>Oceania Eventos</strong>, herdamos o DNA de quem gerencia arenas e produz espetáculos para milhares de pessoas.</p>
+      <p>Nossa atuação vai além do agenciamento. Somos consultores de viabilidade técnica e comercial, garantindo que cada evento tenha o artista certo com a estrutura impecável.</p>
     </div>
   </section>
-  <section style="background:var(--bg2)">
-    <div class="s-label reveal">Nossos valores</div>
-    <h2 class="s-title reveal">Os princípios que guiam cada decisão.</h2>
-    <div class="valores-grid">
-      <div class="valor reveal"><div class="valor-num">01</div><h3 class="valor-title">Transparência</h3><p class="valor-desc">Negociações claras, contratos sem letra miúda e comunicação aberta em todas as fases do processo.</p></div>
-      <div class="valor reveal d1"><div class="valor-num">02</div><h3 class="valor-title">Precisão Técnica</h3><p class="valor-desc">Cada rider é lido, interpretado e executado com rigor. Não existe improviso quando se trata da experiência do artista e do público.</p></div>
-      <div class="valor reveal d2"><div class="valor-num">03</div><h3 class="valor-title">Comprometimento</h3><p class="valor-desc">Assumimos a responsabilidade integral pela entrega. O sucesso do seu evento é o nosso único critério de performance.</p></div>
-      <div class="valor reveal d3"><div class="valor-num">04</div><h3 class="valor-title">Inovação Estratégica</h3><p class="valor-desc">Buscamos permanentemente novas formas de viabilizar projetos — das leis de incentivo às parcerias que expandem o que é possível.</p></div>
-    </div>
-  </section>
-  <section style="background:var(--bg)">
-    <div class="s-label reveal">A equipe</div>
-    <h2 class="s-title reveal">Especialistas que entendem o seu mercado.</h2>
-    <div class="team-grid">
-      <div class="team-card reveal"><div class="team-avatar">G</div><div class="team-name">Gabriel Silveira</div><div class="team-role">Diretor de Operações</div></div>
-      <div class="team-card reveal d1"><div class="team-avatar">A</div><div class="team-name">Ana Carolina</div><div class="team-role">Assessoria Artística</div></div>
-      <div class="team-card reveal d2"><div class="team-avatar">R</div><div class="team-name">Rafael Costa</div><div class="team-role">Produção Técnica</div></div>
-    </div>
-  </section>
-  <section style="background:var(--bg3);border-top:1px solid var(--line2)">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap">
-      <div><div class="s-label">Pronto para começar?</div><h2 class="s-title" style="font-size:clamp(1.6rem,2.8vw,2.4rem)">Vamos construir algo grande juntos.</h2></div>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap">
-        <a href="../servicos/index.html" class="btn-outline">Ver nossos serviços</a>
-        <a href="../index.html#contato" class="btn-main">Falar com a equipe <svg class="arr" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-    </div>
-  </section>
+
   <footer>
     <div class="footer-top">
       <div><div class="f-logo">Quinto Continente</div><div class="f-sub">Por Oceania Eventos</div><p class="f-desc">Excelência em entretenimento, gestão e grandes negócios.</p></div>
       <div><div class="f-col-title">Serviços</div><ul class="f-links"><li><a href="../servicos/index.html#intermediacao">Intermediação de Shows</a></li><li><a href="../servicos/index.html#producao">Produção e Assessoria</a></li><li><a href="../servicos/index.html#especiais">Projetos Especiais</a></li><li><a href="../servicos/index.html#leis">Leis de Incentivo</a></li></ul></div>
-      <div><div class="f-col-title">Empresa</div><ul class="f-links"><li><a href="index.html">Quem Somos</a></li><li><a href="../index.html#diferenciais">Diferenciais</a></li><li><a href="../index.html#contato">Contato</a></li><li><a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a></li></ul></div>
+      <div><div class="f-col-title">Empresa</div><ul class="f-links"><li><a href="index.html">Quem Somos</a></li><li><a href="../index.html#diferenciais">Diferenciais</a></li><li><a href="../galeria/index.html">Galeria</a></li><li><a href="../artistas/index.html">Artistas</a></li><li><a href="../index.html#contato">Contato</a></li><li><a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a></li></ul></div>
       <div><div class="f-col-title">Contato</div><ul class="f-links"><li><a href="mailto:contato@quintocontinente.com.br">contato@quintocontinente.com.br</a></li><li><a href="tel:+5511000000000">(11) 0000-0000</a></li><li><a href="#">São Paulo, SP</a></li></ul></div>
     </div>
     <div class="footer-bot"><p>© 2025 Quinto Continente — Por <a href="#">Oceania Eventos</a>. Todos os direitos reservados.</p><p><a href="#">Privacidade</a> &nbsp;·&nbsp; <a href="#">Termos</a></p></div>
   </footer>
+
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
-
-
-
