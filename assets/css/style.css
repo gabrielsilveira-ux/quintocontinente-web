@@ -126,6 +126,7 @@ nav.scrolled {
   font-size: 2rem; font-weight: 800;
   letter-spacing: -0.02em; color: var(--text);
   text-decoration: none; transition: color .2s;
+  text-align: center;
 }
 .nav-mobile a:hover { color: var(--accent); }
 
