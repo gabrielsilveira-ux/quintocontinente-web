@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solicitar Booking – Quinto Continente</title>
   <meta name="description" content="Formulário de solicitação de booking artístico. Preencha os dados do seu evento e receba uma proposta em até 24h.">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <style>
     .booking-layout { display:grid; grid-template-columns:1fr 1.4fr; gap:6rem; align-items:start; padding:5rem 3rem 8rem; max-width:1200px; margin:0 auto; }
@@ -24,6 +24,7 @@
     @media(max-width:900px){ .booking-layout{grid-template-columns:1fr;gap:3rem;padding:3rem 1.5rem 5rem} .booking-info-sticky{position:static} }
     @media(max-width:768px){ .bk-item { padding: 1rem; } }
   </style>
+  <script>if(localStorage.getItem('qc_theme')==='light') document.documentElement.setAttribute('data-theme','light');</script>
 </head>
 <body>
   <nav id="nav">
@@ -35,8 +36,11 @@
       <li><a href="../../sobre/index.html">Quem Somos</a></li>
       <li><a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a></li>
     </ul>
-    <a href="../../index.html#contato" class="nav-btn">Consultar Agenda</a>
-    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <a href="../../index.html#contato" class="nav-btn">Consultar Agenda</a>
+      <button class="theme-toggle" aria-label="Alternar tema" id="themeToggle"><svg id="themeIcon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
+      <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </nav>
   <div class="nav-mobile">
     <a href="../../index.html">Home</a>
@@ -124,3 +128,5 @@
   </script>
 </body>
 </html>
+
+
