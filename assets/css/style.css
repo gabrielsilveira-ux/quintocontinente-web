@@ -68,21 +68,23 @@ body {
 /* ── Navigation ────────────────────────────────────────────── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 1.5rem max(var(--site-pad), calc((100% - var(--max-w)) / 2));
-  transition: background .3s, border-color .3s;
+  display: flex; justify-content: center;
+  padding: 1.5rem var(--site-pad);
+  transition: background .3s, border-color .3s, padding .3s;
 }
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
   width: 100%; max-width: var(--max-w);
 }
 nav.scrolled {
-  background: rgba(10,10,10,0.9);
+  background: rgba(10,10,10,0.85);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--line2);
+  padding: 0.8rem var(--site-pad);
 }
 .nav-logo { text-decoration: none; display: flex; align-items: center; }
-.nav-logo img { height: 72px; display: block; transition: height .3s; }
+.nav-logo img { height: 120px; display: block; transition: height .3s; }
+nav.scrolled .nav-logo img { height: 80px; }
 .nav-links {
   display: flex; align-items: center; gap: 2.5rem;
   list-style: none;
@@ -625,6 +627,13 @@ footer {
   gap: 2.5rem;
 }
 @media (max-width: 768px) {
+  nav { padding: 1rem var(--site-pad); }
+  .nav-logo img { height: 94px; }
+  nav.scrolled .nav-logo img { height: 72px; }
+  .nav-links { display: none; }
+  .nav-btn { display: none; }
+  .nav-hamburger { display: flex; }
+
   .artists-grid {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 1.5rem;
