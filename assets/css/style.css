@@ -174,11 +174,12 @@ section.hero { padding: calc(var(--nav-h) + 5rem) 3rem 5rem; }
 
 /* ── Hero (novo — 2 colunas humanizado) ────────────────────── */
 .hero {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   padding: calc(var(--nav-h) + 5rem) 3rem 5rem;
   position: relative;
   overflow: hidden;
@@ -186,12 +187,14 @@ section.hero { padding: calc(var(--nav-h) + 5rem) 3rem 5rem; }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
   background:
-    radial-gradient(ellipse 60% 70% at 0% 50%, rgba(255,88,88,0.06) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 50% at 100% 20%, rgba(255,88,88,0.04) 0%, transparent 60%);
+    radial-gradient(circle at center, rgba(255,88,88,0.08) 0%, transparent 70%);
 }
 .hero-left {
   position: relative; z-index: 1;
-  display: flex; flex-direction: column; gap: 2rem;
+  display: flex; flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 900px;
 }
 .hero-tag {
   display: inline-flex; align-items: center; gap: 0.6rem;
@@ -199,7 +202,6 @@ section.hero { padding: calc(var(--nav-h) + 5rem) 3rem 5rem; }
   font-size: 0.62rem; font-weight: 700;
   letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--accent);
-  align-self: flex-start;
 }
 .hero-tag-dot {
   width: 6px; height: 6px; border-radius: 50%;
@@ -210,87 +212,29 @@ section.hero { padding: calc(var(--nav-h) + 5rem) 3rem 5rem; }
 
 .hero h1 {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2.6rem, 5vw, 4.4rem);
-  font-weight: 800; line-height: 1.05;
-  letter-spacing: -0.03em; color: var(--text);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 800; line-height: 1.0;
+  letter-spacing: -0.04em; color: var(--text);
 }
 .hero h1 .hl {
   color: var(--accent);
   background: none; -webkit-text-fill-color: var(--accent);
 }
 .hero-sub {
-  font-size: 1rem; font-weight: 300;
-  line-height: 1.8; color: var(--muted2);
-  max-width: 480px;
+  font-size: 1.15rem; font-weight: 300;
+  line-height: 1.7; color: var(--muted2);
+  max-width: 680px;
 }
-.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.hero-actions { display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center; justify-content: center; }
 .hero-rule { display: none; }
 
 
-
-/* Hero direita — slot de imagem */
-.hero-right {
-  position: relative; z-index: 1;
-  height: 560px;
-}
-.hero-img-wrap {
-  width: 100%; height: 100%;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  background: var(--bg2);
-  border: 1px solid var(--line2);
-  position: relative;
-}
-.hero-img-wrap img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 8s ease;
-}
-.hero-img-wrap:hover img { transform: scale(1.04); }
-.hero-img-ph {
-  width: 100%; height: 100%;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  gap: 1rem; color: var(--muted);
-}
-.hero-img-ph svg { width: 48px; height: 48px; opacity: .4; }
-.hero-img-ph p { font-size: .78rem; color: var(--muted); text-align: center; line-height: 1.6; }
-.hero-img-glow {
-  position: absolute; bottom: -20px; left: 50%;
-  transform: translateX(-50%);
-  width: 70%; height: 120px;
-  background: rgba(255,88,88,0.2);
-  filter: blur(40px);
-  border-radius: 50%;
-  pointer-events: none;
-}
-.hero-img-badge {
-  position: absolute; bottom: 1.5rem; left: 1.5rem;
-  background: rgba(10,10,10,0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--line2);
-  border-radius: var(--radius-md);
-  padding: 0.9rem 1.25rem;
-  display: flex; align-items: center; gap: 0.9rem;
-}
-.hero-img-badge-num {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.5rem; font-weight: 800;
-  color: var(--accent); line-height: 1;
-}
-.hero-img-badge-text {
-  font-size: 0.72rem; font-weight: 400;
-  color: var(--muted2); line-height: 1.4;
-}
-
 @media (max-width: 900px) {
   .hero {
-    grid-template-columns: 1fr;
     min-height: auto;
     padding-bottom: 4rem;
   }
-  .hero-right { height: 300px; }
+  .hero-right { display: none; }
 }
 
 
