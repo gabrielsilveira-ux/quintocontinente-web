@@ -15,7 +15,7 @@
       min-height: 100vh;
       display: flex;
       align-items: flex-end;
-      padding: calc(var(--nav-h) + 4rem) 3rem 5rem;
+      padding: calc(var(--nav-h) + 4rem) max(var(--site-pad), calc((100% - var(--max-w)) / 2)) 5rem;
       position: relative;
       overflow: hidden;
     }
@@ -38,8 +38,6 @@
       gap: 4rem;
       align-items: flex-end;
       width: 100%;
-      max-width: 1400px;
-      margin: 0 auto;
     }
     .qs-hero-left { display: flex; flex-direction: column; gap: 1.5rem; }
     .qs-breadcrumb { display: flex; align-items: center; gap: .5rem; font-size: .75rem; color: var(--muted2); text-transform: uppercase; letter-spacing: .1em; }
@@ -66,9 +64,7 @@
 
     /* ── Manifesto ─── */
     .manifesto {
-      padding: 8rem 3rem;
-      max-width: 1400px;
-      margin: 0 auto;
+      padding: 8rem max(var(--site-pad), calc((100% - var(--max-w)) / 2));
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 6rem;
@@ -91,11 +87,10 @@
       background: var(--bg2);
       border-top: 1px solid var(--line2);
       border-bottom: 1px solid var(--line2);
-      padding: 5rem 3rem;
+      padding: 5rem max(var(--site-pad), calc((100% - var(--max-w)) / 2));
     }
     .stats-bar-inner {
-      max-width: 1400px;
-      margin: 0 auto;
+      width: 100%;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
@@ -115,9 +110,7 @@
 
     /* ── Timeline ─── */
     .timeline-section {
-      padding: 8rem 3rem;
-      max-width: 900px;
-      margin: 0 auto;
+      padding: 8rem max(var(--site-pad), calc((100% - (var(--max-w) * 0.7)) / 2));
     }
     .tl-header { margin-bottom: 5rem; }
     .tl-header .s-label { margin-bottom: 1rem; display: block; }
@@ -141,10 +134,10 @@
 
     /* ── DNA Cards ─── */
     .dna-section {
-      padding: 8rem 3rem;
+      padding: 8rem max(var(--site-pad), calc((100% - var(--max-w)) / 2));
       background: var(--bg2);
     }
-    .dna-inner { max-width: 1400px; margin: 0 auto; }
+    .dna-inner { width: 100%; }
     .dna-header { margin-bottom: 4rem; }
     .dna-header .s-label { margin-bottom: 1rem; display: block; }
     .dna-header h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; color: var(--text); }
