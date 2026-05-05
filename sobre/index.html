@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/media.css">
-  <script>if(localStorage.getItem('qc_theme')==='light') document.documentElement.setAttribute('data-theme','light');</script>
+
   <style>
     /* ── Page Hero Quem Somos ─── */
     .qs-hero {
@@ -193,21 +193,21 @@
 </head>
 <body>
   <nav id="nav">
-    <a href="../index.html" class="nav-logo">
-      <img src="../assets/images/logo.png" alt="Quinto Continente" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\'font-family:Space Grotesk,sans-serif;font-size:1.1rem;font-weight:800;color:var(--text)\'>Quinto Continente</span>')">
-    </a>
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="index.html" class="active">Quem Somos</a></li>
-      <li><a href="../artistas/index.html">Artistas</a></li>
-      <li><a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a></li>
-    </ul>
-    <div style="display:flex; align-items:center; gap:1rem;">
-      <a href="../index.html#contato" class="nav-btn">Consultar Agenda</a>
-      <button class="theme-toggle" aria-label="Alternar tema" id="themeToggle">
-        <svg id="themeIcon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button>
-      <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logo.png" alt="Quinto Continente" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\'font-family:Space Grotesk,sans-serif;font-size:1.1rem;font-weight:800;color:var(--text)\'>Quinto Continente</span>')">
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html" class="active">Quem Somos</a></li>
+        <li><a href="../artistas/index.html">Artistas</a></li>
+        <li><a href="https://blog.quintocontinente.com.br" target="_blank" rel="noopener">Blog</a></li>
+      </ul>
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <a href="../index.html#contato" class="nav-btn">Consultar Agenda</a>
+
+        <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </nav>
   <div class="nav-mobile">

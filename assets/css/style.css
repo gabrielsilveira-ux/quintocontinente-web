@@ -26,18 +26,7 @@
   --max-w:      1400px;
 }
 
-[data-theme="light"] {
-  --bg:         #FFFFFF;
-  --bg2:        #F9F9F9;
-  --bg3:        #EFEFEF;
-  --surface:    #FFFFFF;
-  --line:       rgba(0,0,0,0.06);
-  --line2:      rgba(0,0,0,0.12);
-  --text:       #111111;
-  --muted:      #888888;
-  --muted2:     #555555;
-  --accent-dim: rgba(255,88,88,0.12);
-}
+
 
 html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 
@@ -109,12 +98,7 @@ nav.scrolled .nav-logo img { height: 80px; }
 }
 .nav-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,88,88,0.3); }
 
-.theme-toggle {
-  display: flex; align-items: center; justify-content: center;
-  background: none; border: none; cursor: pointer; color: var(--text);
-  padding: 8px; border-radius: 50%; transition: background .2s, color .2s;
-}
-.theme-toggle:hover { background: var(--bg3); color: var(--accent); }
+
 
 /* Hamburger (mobile) */
 .nav-hamburger {
